@@ -1,0 +1,19 @@
+ //Here is the solution . just we will doing this part. 
+ 
+ 
+SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data, int position) {
+        SinglyLinkedListNode *node=(SinglyLinkedListNode*)malloc(sizeof(SinglyLinkedListNode));
+        node->data=data;
+        SinglyLinkedListNode *temp;
+        temp=head;
+        int i=1;
+        while(i<position){
+            temp=temp->next;
+            i++;
+        }
+        node->next=temp->next;
+        temp->next=node;
+        return head;
+        
+
+}
